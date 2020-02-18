@@ -1,0 +1,14 @@
+.modal.fade(id="exampleModalLong", tabindex="-1", role="dialog", aria-labelledby="exampleModalLongTitle", aria-hidden="true")
+    .modal-dialog(role="document")
+        .modal-content
+            .contact-us-form
+                form.ui-form
+                    .modal-header
+                        h5.modal-title(id="exampleModalLongTitle") Свяжитесь с нами
+                        button(type="button", class="close", data-dismiss="modal", aria-label="Close")
+                            span(aria-hidden="true") &times;
+                    .modal-body
+                        include ./contact_us_form.pug
+
+                    .modal-footer.ui-form-buttons
+                        button(type="button", class="btn btn-primary") Оставить заявку

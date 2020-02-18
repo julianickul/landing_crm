@@ -1,0 +1,20 @@
+//- layout.pug
+include mixins
+doctype html
+html
+    head
+        include ./head.pug
+    body
+        .svg-sprite
+            include ../../svg/svg_social.svg
+            include ../../svg/svg_icons.svg
+        block header
+            include ./header.pug
+        block content
+            block main_content
+                p some text goes here
+        block footer
+            include ./footer.pug
+
+        block body_scripts
+            include ./body_scripts.pug

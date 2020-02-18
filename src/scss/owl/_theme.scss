@@ -1,0 +1,112 @@
+.owl-theme {
+	// Styling Next and Prev buttons
+	padding: 0 100px;
+	/*.owl-nav {
+		margin-top: 10px;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		[class*='owl-'] {
+			color: $nav-color;
+			font-size: $nav-font-size;
+			margin: $nav-margin;
+			padding: $nav-padding;
+			background: $nav-background;
+			display: inline-block;
+			cursor: pointer;
+			border-radius: 3px;
+
+			&:hover {
+				background: $nav-background-hover;
+				color:$nav-color-hover;
+				text-decoration: none;
+			}
+		}
+		.disabled {
+			opacity: $nav-disabled-opacity;
+			cursor: default;
+		}
+	}*/
+	.owl-nav {
+		position: absolute;
+		top:0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;;
+		[class*='owl-'] {
+			width:50px;
+			opacity: 1;
+			position: absolute;
+			top:40px;
+			margin-top: -10px;
+			span {
+				display: block;
+				width: 20px;
+				height: 20px;
+				background: transparent;
+				border-top: 7px solid $color1;
+				border-right: 7px solid $color1;
+				transition: all 200ms ease;
+				opacity: 1;
+				text-indent: -999px;
+				overflow: hidden;
+				&:hover {
+					border-color: $color2;
+				}
+			}
+		}
+	}
+	.owl-stage-outer {
+		z-index: 2;
+		padding-bottom: 40px;
+	}
+
+    .owl-prev {
+		left: 0;
+		span {
+			transform: rotate(-135deg);   
+		}
+    }
+    .owl-next {
+		right: 0;
+		span {
+			transform: rotate(45deg);
+		}
+    }
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+
+	.owl-dots {
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+
+			span {
+				width: $dot-width;
+				height: $dot-height;
+				margin: $dot-margin;
+				background: $dot-background;
+				display: block;
+				-webkit-backface-visibility: visible;
+				//transition: opacity 200ms ease;
+				transition: background-color .6s ease;
+				border-radius: $dot-rounded;
+			}
+
+			&.active,
+			&:hover {
+				span {
+					background: $dot-background-active;
+				}
+			}
+		}
+	}
+}

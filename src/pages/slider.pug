@@ -1,0 +1,27 @@
+//- index.pug
+extends ./templates/layout.pug
+
+block main_content
+    .main_content
+        //include ./parts/1_main.pug
+        //include ./parts/2_stat.pug
+        include ./parts/1_main_02.pug
+        include ./parts/2_stat.pug
+        include ./parts/3_complex.pug
+        //include ./parts/4_effect.pug
+        //include ./parts/crm_overview.pug
+        //include ./parts/5_testimonials.pug
+        //include ./parts/6_clients.pug
+        //include ./parts/7_contact.pug
+
+    include ./parts/contact_us_popup.pug
+    .scrollToTop#scroll_top_btn
+        a(href="#header")
+            span.svg-icon
+                svg
+                    use(xlink:href="#arrow-up")
+    .contactUsBtn#contact_btn(data-toggle="modal", data-target="#exampleModalLong") 
+        span.svg-icon
+            svg
+                use(xlink:href="#contact-us")
+        span Оставить заявку

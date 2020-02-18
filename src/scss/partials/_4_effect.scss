@@ -1,0 +1,39 @@
+.effect-item {
+    display: flex;
+    padding: 20px 0;
+    .item-title {
+        font-size:30px;
+        color: $color4;
+        font-weight: 300;
+        margin: 0 0 0.5em;
+    }
+    .item-desc {
+        font-size: 18px;
+    }
+
+    .item-image {
+        margin-right: 30px;
+        svg.icon {
+            width: 60px;
+            height: 60px;
+            fill:$color5;
+        }
+    }
+}
+.ask-more {
+    margin: 50px 0 0;
+    text-align: center;
+    > span {
+        margin-right: 40px;
+        font-size: 20px;
+    }
+    .svg-icon {
+        padding: 0 0 0 30px;
+        svg{
+            transform: rotate(90deg);
+            fill:$color2;
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

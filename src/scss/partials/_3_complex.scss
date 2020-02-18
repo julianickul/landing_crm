@@ -1,0 +1,14 @@
+.complex-item {
+    text-align: center;
+    .item-image {
+        margin: 0 0 20px;
+    }
+    svg.icon {
+        width: 100px;
+        fill:$color4;
+    }
+    .item-title {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,172 @@
+.crm-overview {
+    .crm-overview-header {
+        font-size:24px;
+        margin: 0 0 1em;
+        color: $text_color;
+        font-weight: 300;
+    }
+}
+
+.crm-overview-wrapper {
+    display: flex;
+}
+
+.crm-overview {
+    position: relative;
+    .crm-overview-item {
+        position: relative;
+        z-index: 2;
+        input[type='radio'] {
+            display: none;
+            &:checked {
+                & + .crm-overview-header {
+                    &:before {
+                        opacity: 1;
+                    }
+                    &:after {
+                        display:block;
+                    }
+                }
+
+                & + .crm-overview-header h3 {
+                    color:$color4;
+                }
+                & ~ .crm-overview-content {
+                    max-height: 100%; 
+                    opacity: 1;
+                    z-index: 10;
+                    overflow-y: auto; 
+                }
+            }
+        }
+        label {
+            position: relative;
+            cursor: pointer;
+            @include noselect();
+        }
+        .crm-overview-content {
+            max-height: 0;
+            @include transition(all 0.4s);
+            opacity: 0;
+            position: relative;
+            overflow-y: hidden; 
+        }
+    }
+    .crm-overview-header {
+        h3 {
+            padding: 0 10px;
+            font-size: 24px;
+            @include transition(all 0.4s);
+            &:hover {
+                color:$color4;
+            }
+        }
+    }
+    .crm-overview-content {
+        margin-left: 30px;
+    }
+}
+.crm-overview-desc {
+    display: none;
+    margin: 0 0 0 60px;
+    @include transition(opacity, 1s);
+}
+.crm-overview-content, .crm-overview-desc {
+    ul {
+        margin:0 0 30px;
+        padding: 0;
+        list-style: none;
+        li {
+            text-align: left;
+            position: relative;
+            padding-left: 20px;
+            &:before {
+                content: '';
+                width: 5px;
+                height: 5px;
+                display: block;
+                background: $color4;
+                position: absolute;
+                top:10px;
+                left: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .crm-overview {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 30px;
+        flex-basis: 300px;
+        min-width: 300px;
+        border-right:2px solid $color2;
+
+        background: #fff;
+
+        /*&:before, &:after {
+            left: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+        &:after {
+            border-left-color: #fff;
+            border-width: 10px;
+            margin-top: -10px;
+        }
+        &:before {
+            border-color: rgba(163, 12, 51, 0);
+            border-left-color: #a30c33;
+            border-width: 13px;
+            margin-top: -13px;
+        }*/
+        
+        .crm-overview-item {
+            position: relative;
+            z-index: 2;
+        }
+        .crm-overview-header {
+            position: relative;
+            &:before, &:after {
+                left: 100%;
+                top: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+            &:after {
+                border-left-color: #fff;
+                border-width: 10px;
+                margin-top: -10px;
+                display: none;
+            }
+            &:before {
+                border-color: rgba(163, 12, 51, 0);
+                border-left-color: #a30c33;
+                border-width: 13px;
+                margin-top: -13px;
+                opacity: 0;
+            }
+
+            h3 {
+                margin: 0;
+                font-weight: 300;
+            }
+        }
+        .crm-overview-content {
+            display: none;
+        }
+    }
+    .crm-overview-desc {
+        display: block;
+    }
+}

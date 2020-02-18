@@ -1,0 +1,107 @@
+.main-content {
+    margin-top:110px;
+}
+.box {
+    padding: 1em;
+}
+.section {
+    padding: 2em 0;
+    background: #fff;
+}
+@media (min-width: 1366px) {
+    .section {
+        padding: 2em 0;
+    }
+}
+@media (min-width: 1600px) {
+    .section {
+        padding: 4em 0;
+    }
+}
+
+.section-style1 {
+    background: rgba(255,255,255,.5);
+}
+.section-style2 {
+    background: $color0;
+}
+.anchor {
+    display:block;
+    height:110px;
+    margin-top:-110px;
+    visibility:hidden;
+}
+.svg-sprite  {
+    display: none;
+    overflow: hidden;
+}
+
+ul.ui-style-tick {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 12px;
+        &:before {
+            margin-right: 18px;
+            margin-top: 4px;
+            display: inline-block;
+            content: "";
+            width: 6px;
+            height: 12px;
+            border-color:$color2;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            position: absolute;
+            top:2px;
+            left: 0;
+        }
+    }
+}
+
+.contactUsBtn, .scrollToTop {
+    display: inline;
+    position: fixed;
+    z-index: 1001;
+    right: 24px;
+    bottom: 50px;
+    cursor: pointer;
+}
+.contactUsBtn {
+    color:$bg_color;
+    background-color: $color2;
+    padding: 5px 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    font-size: 16px;
+    @include transition(all, 0.2s);
+    &:hover {
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+        background-color: darken($color2, 5%);
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.scrollToTop {
+    display: none;
+    bottom:150px;
+    .svg-icon {
+        background: #fff;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+        transition: box-shadow .2s;
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        text-align: center;
+        border-radius: 50%;
+        display: block;
+        &:hover {
+            box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+        }
+    }
+}

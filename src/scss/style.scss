@@ -1,0 +1,51 @@
+/*
+Theme Name: RPA Landing Theme
+Author: Softline
+Author URI: https://rpa.softline.com/
+Description: RPA Landing Theme Description
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rpa
+Tags: one-column
+*/
+
+@import "_constants";
+@import "_layout";
+@import "_content";
+@import "_typographics";
+@import "_svg";
+@import "_form";
+@import "_carousel";
+@import "partials/_1_main";
+@import "partials/_2_stat";
+@import "partials/_3_complex";
+@import "partials/_4_effect";
+@import "partials/_5_testimonials";
+@import "partials/_crm_overview";
+@import "partials/_6_clients";
+@import "partials/_7_contact";
+@import "partials/_softline_social";
+
+@import "_owl.carousel";
+@import "_owl.theme.default";
+
+
+
+
+
+//@import "_circle";
+
+.clearfix:after,
+.header:after,
+.testimonial-item .item-header:after,
+.header .navbar:after,
+.section-contact dl:after
+{
+	content:"";
+	clear:both;
+	display:block;
+	height:0;
+	font:0/0 a;
+	visibility:hidden;
+}

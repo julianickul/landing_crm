@@ -1,0 +1,30 @@
+header.header#header
+    nav.navbar.navbar-expand-lg.navbar-light.fixed-top
+        //nav.navbar.navbar-expand-lg.navbar-light
+        .logo
+            a(href="")
+                include ../../svg/SL_logo_SVG.svg
+        .partner-logo
+            img(src="./images/MS-Partner.png", alt="Microsoft Gold Partner Cloud Customer Relationship Management")
+        
+        button.navbar-toggler.ml-auto(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+
+        .collapse.navbar-collapse#navbarCollapse
+            ul.navbar-nav.ml-auto#main_nav
+                li.nav-item
+                    a.nav-link(href="#onas") О нас
+                li.nav-item
+                    a.nav-link(href="#vygody") Выгоды от внедрения
+                li.nav-item
+                    a.nav-link(href="#podhod") Наш подход
+                li.nav-item
+                    a.nav-link(href="#otzyvy") Отзывы
+                li.nav-item
+                    a.nav-link(href="#kontakty") Контакты
+            //.navbar-phone
+                a.nav-link.phone(href="callto:+74952320023")
+                    span.svg-icon
+                        svg
+                            use(xlink:href="#phone1")
+                    span +7(495) 232-0023

@@ -1,0 +1,53 @@
+.anchor#main
+.section.section-main
+    
+    #main_slider.mainSlider.carousel.slide(data-ride="carousel")
+        ol.carousel-indicators
+            li(data-target="#main_slider", data-slide-to="0", class="active")
+            li(data-target="#main_slider", data-slide-to="1")
+            li(data-target="#main_slider", data-slide-to="2")
+
+
+        .carousel-inner
+            .carousel-item.active
+                .background-overlay
+                    img(src="./images/banner1.jpg")
+                .box
+                    h2 Microsoft Dynamics CRM 365 - Внедряйте с ведущим лидером рынка
+                    .ui-form-buttons
+                        a.btn.btn-color-scheme1(href='#kontakty') Оставить заявку
+            .carousel-item
+                .background-overlay
+                    img(src="./images/banner2.jpg")
+                .box
+                    h2 Отраслевой опыт, подтвержденный проектами
+                    .ui-form-buttons
+                        a.btn.btn-color-scheme1(href='#kontakty') Оставить заявку
+            .carousel-item
+                .background-overlay
+                    img(src="./images/banner3.jpg")
+                .box
+                    h2 Нам доверяют заказчики и партнеры
+                    .ui-form-buttons
+                        a.btn.btn-color-scheme1(href='#kontakty') Оставить заявку
+
+            
+
+        a.carousel-control-prev(href="#main_slider", role="button", data-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.sr-only Previous
+
+        a.carousel-control-next(href="#main_slider", role="button", data-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.sr-only Next
+
+            
+        
+    //.background-overlay
+    //.container
+        .box 
+            h1 Microsoft Dynamics CRM 365
+            p Внедряйте с ведущим лидером рынка
+
+            .ui-form-buttons
+                a.btn.btn-color-scheme1(href='#kontakty') Оставить заявку

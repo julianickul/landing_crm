@@ -1,0 +1,77 @@
+
+script.
+    $(function(){
+        $('.carousel_clients').owlCarousel({
+            loop:true,
+            autoWidth:true,
+            items:3,
+            margin:100,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true,
+            responsiveClass:true,
+            dots:false,
+            nav:true,
+        })
+    
+        let mainNavLinks = document.querySelectorAll("#main_nav a");
+        let lastId;
+        let cur = [];
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach(link => {
+                let section = document.querySelector(link.hash);
+                if (
+                    section.offsetTop <= fromTop &&
+                    section.offsetTop + section.offsetHeight > fromTop
+                ) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+            if($(this).scrollTop() >= $('.section-contact').position().top - $('.section-contact').outerHeight()){
+                $('#contact_btn').hide();
+            } else {
+                $('#contact_btn').show();
+            }
+            if($(this).scrollTop() >= 50){
+                $('#scroll_top_btn').show();
+            } else {
+                $('#scroll_top_btn').hide();
+            }
+        });
+
+
+        var crmOverviewItems = $('.crm-overview-item'),
+            crmOverviewDesc = $('#crmoverview_desc');
+
+        if (crmOverviewItems.length > 0) {
+            var crmOverviewItemContent = $(crmOverviewItems[0]).find('.crm-overview-content');
+            var crmOverviewCloneItem = crmOverviewItemContent.clone(true);
+            crmOverviewDesc.empty().append(crmOverviewCloneItem);
+        }
+        
+        $.each(crmOverviewItems, function() {
+            var crmOverviewItemContent = $(this).find('.crm-overview-content');
+            var crmOverviewCloneItem = crmOverviewItemContent.clone(true);
+            $(this).find('input').on('click', function() {
+                crmOverviewDesc.empty().append(crmOverviewCloneItem);
+            })
+        });
+
+        //$('#da-slider').cslider();
+        /*$('#main_slider').owlCarousel({
+            loop:true,
+            margin:0,
+            nav:true,
+            items:1,
+            autoWidth:true,
+            dots:true,
+            nav:true
+        })*/
+
+    })
+
+

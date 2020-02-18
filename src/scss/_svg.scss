@@ -1,0 +1,38 @@
+.scrollToTop {
+    .svg-icon {
+        svg {
+            fill:$color2;
+            color:$bg_color;
+            width: 20px;
+            height: 20px;
+            stroke:$color2;
+        }
+    }
+}
+.contactUsBtn {
+    .svg-icon {
+        margin: 0 10px 0 0;
+        svg {
+            fill:$bg_color;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+.header {
+    .phone {
+        span {
+            vertical-align: middle;
+        }
+        .svg-icon {
+            margin: 0 5px 0 0;
+            svg {
+                fill: $color2;
+                width: 20px;
+                height: 20px;
+                margin-right:2px;
+                overflow: hidden;
+            }
+        }
+    }
+}

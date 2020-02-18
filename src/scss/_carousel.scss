@@ -1,0 +1,58 @@
+.section-testimonials .carousel {
+    padding: 0 40px 80px;
+}
+@media (min-width: 768px) {
+    .section-testimonials .carousel {
+        padding: 0 80px 80px;
+    }
+}
+@media (min-width: 992px) {
+    .section-testimonials .carousel {
+        padding: 0 100px 80px;
+    }
+}
+.carousel {
+    .carousel-indicators {
+        li {
+            opacity: 1;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            //background-color: $color1;
+            background-color: $bg_color;
+            transition: background-color .6s ease;
+            &:hover {
+                background-color: $color2;
+            }
+        }
+        .active {
+            background-color: $color2;
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width:50px;
+        opacity: 1;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        //border-top: 7px solid $color1;
+        //border-right: 7px solid $color1;
+        border-top: 7px solid $bg_color;
+        border-right: 7px solid $bg_color;
+        transition: all 200ms ease;
+        opacity: 1;
+        &:hover {
+            border-color: $color2;
+        }
+    }
+    .carousel-control-prev-icon {
+        transform: rotate(-135deg);   
+    }
+    .carousel-control-next-icon {
+        transform: rotate(45deg);
+    }
+}

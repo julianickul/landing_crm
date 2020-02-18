@@ -1,0 +1,53 @@
+/* Palette >> */
+$bg_color:#fff;
+$color0: #f3f3f3;
+$color1: #cbcfd2;
+$color2: rgb(163, 12, 51);
+$color3: #fbb034;
+$color4: $color2;
+$color5: #7e7e7e;
+$color6:#606060;
+$color7: #000;
+$link_color1:$color2;
+$text_color:$color6;
+/* Palette << */
+
+
+/* Fonts >> */
+$base_font: 'Roboto', sans-serif;
+/* Fonts << */
+
+
+/* mixins >> */
+@mixin bar($width, $color) {
+    .bar-value, .dot, .bar-number {
+        background-color: $color;
+    }
+    .bar-value {
+        width: $width;
+    }
+    .bar-number:after {
+        border-top-color:$color;
+    }
+}
+@mixin transition($trans...) {
+    -webkit-transition: $trans;
+    -moz-transition: $trans;
+    -ms-transition: $trans;
+    transition: $trans;
+}
+@mixin noselect() {
+    -webkit-user-select: none;
+    -moz-user-select: none;     
+    -ms-user-select: none; 
+    -o-user-select: none;
+    user-select: none;   
+}
+@mixin animtion($animationName, $animationDelay, $animationDuration) {
+    -webkit-animation: Anim 0.6s ease-in 0.3s both;
+    -moz-animation: Anim 0.6s ease-in 0.3s both;
+    -o-animation: Anim 0.6s ease-in 0.3s both;
+    -ms-animation: Anim 0.6s ease-in 0.3s both;
+    animation: Anim 0.6s ease-in 0.3s both;
+}
+/* mixins << */

@@ -1,0 +1,18 @@
+.carousel_clients {
+    .client-item {
+        display: flex;
+        height: 100px;
+        align-items: center;
+        a, span {
+            display: inline-block;
+        }
+        text-align: center;
+        img {
+            display: block;
+            max-height: 100px;
+            max-width: 200px;
+            width: auto !important;
+            height: auto;
+        }
+    }
+}

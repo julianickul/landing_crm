@@ -1,0 +1,101 @@
+/* placeholder > */
+::-webkit-input-placeholder {
+    color:#71716f;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color:#71716f;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    color:#71716f;
+}
+:-ms-input-placeholder {
+    color:#71716f;
+}
+
+[placeholder]:focus::-webkit-input-placeholder { color:transparent; }
+[placeholder]:focus:-moz-placeholder { color: transparent; }
+.placeholder {color:#71716f;}
+/* placeholder < */
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+input, textarea, button {
+    &:focus, &:active {
+        outline: none;
+    }
+}
+/* Form types > */
+.ui-form{
+    
+    .ui-form-item {
+        margin: 0 0 20px;
+    }
+    .ui-form-label {
+        display: none;
+    }
+    .field-type_text {
+        input, textarea {
+            background: #fff;
+            font-size: 16px;
+            font-family:$base_font;
+            color:$text_color;
+            border: 0;
+            border: 1px solid $color1;
+            border-radius: 5px;
+            padding: 10px;
+            //width: 95%;
+        }
+        textarea {
+            height: 100px;
+        }
+    }
+    .ui-form-buttons {
+        margin: 0 0 15px;
+        text-align: center;
+    }
+}
+.btn, .btn-primary {
+    font-size: 16px;
+    font-family:$base_font;
+    text-transform: uppercase;
+    background: $color2;
+    border: 1px solid $color2;
+    border-radius: 5px;
+    padding: 10px 30px;
+    cursor:pointer;
+    &.btn-color-scheme2 {
+        background: $color4;
+        border: 1px solid $color4;
+        color:#fff;
+    }
+    &.btn-color-scheme1 {
+        background: #fff;
+        border-color: #fff;
+        color:#000;
+        @include transition(all, 0.2s);
+    }
+}
+.btn:hover, .btn-primary:hover {
+    color: #fff;
+    background: darken($color2, 5%);
+    border-color: darken($color2, 5%);
+    &.btn-color-scheme2 {
+        background: darken($color4, 5%);
+        border-color: darken($color4, 5%);
+    }
+    &.btn-color-scheme1 {
+        color:#fff;
+        background: $color4;
+        border-color: $color4;
+    }
+    
+}
+a.btn, a.btn:link, a.btn:visited {
+    text-decoration: none;
+}
+
+.ui-form-buttons {
+    .btn {
+        margin: 0 auto;
+    }
+}
