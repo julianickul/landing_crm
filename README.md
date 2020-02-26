@@ -1,11 +1,13 @@
 Разработка дизайна и верстки
 
 Код доступен на github pages 
-https://julianickul.github.io/landing_crm/dist/?#header
+https://julianickul.github.io/landing_crm/dist
 
 
 ## Используемые технологии
 * Pug
 * SCSS
-* Bootstrap
 * Gulp
+* Bootstrap
+* jQuery
+* SVG
